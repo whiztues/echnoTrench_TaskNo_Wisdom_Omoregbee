@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Simulation Results{% endblock %}
+
+{% block content %}
+<h1>Simulation Results</h1>
+<table>
+    <tr>
+        <th>Email</th>
+        <th>Clicks</th>
+        <th>Submissions</th>
+    </tr>
+    {% for user in users %}
+    <tr>
+        <td>{{ user['email'] }}</td>
+        <td>{{ user['clicked'] }}</td>
+        <td>{{ user['submitted'] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<h2>Detailed Interactions</h2>
+<table>
+    <tr>
+        <th>User ID</th>
+        <th>Action</th>
+        <th>Timestamp</th>
+    </tr>
+    {% for interaction in interactions %}
+    <tr>
+        <td>{{ interaction['user_id'] }}</td>
+        <td>{{ interaction['action'] }}</td>
+        <td>{{ interaction['timestamp'] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

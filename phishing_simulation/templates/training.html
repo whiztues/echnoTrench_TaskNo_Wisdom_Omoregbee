@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Training</title>
+</head>
+<body>
+    <h1>Security Awareness Training</h1>
+    <p>You have clicked on a simulated phishing link. This was a test to see how well you can identify phishing emails.</p>
+    <form action="{{ url_for('submit', user_id=user_id) }}" method="post">
+        <button type="submit">Acknowledge</button>
+    </form>
+</body>
+</html>
